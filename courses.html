@@ -18,13 +18,12 @@ const courses = [
 
 const coursesContainer = document.getElementById("courses");
 
-courses.forEach(course => {
-    coursesContainer.innerHTML += `
-        <div class="course">
-            <h2>${course.title}</h2>
-            <p>${course.description}</p>
-            <span>${course.duration}</span>
-            <button>Enroll Now</button>
-        </div>
-    `;
-});
+// Wuxuu hal mar oo kaliya ka dhalinayaa HTML-ka oo dhan (Best Practice)
+coursesContainer.innerHTML = courses.map(course => `
+    <div class="course">
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+        <span>${course.duration}</span>
+        <button>Enroll Now</button>
+    </div>
+`).join('');
