@@ -1,0 +1,30 @@
+const courses = [
+    {
+        title: "JavaScript",
+        description: "Learn JavaScript from beginner to advanced.",
+        duration: "3 Months"
+    },
+    {
+        title: "React.js",
+        description: "Learn how to build modern web applications.",
+        duration: "2 Months"
+    },
+    {
+        title: "Node.js",
+        description: "Learn backend development with Node.js.",
+        duration: "3 Months"
+    }
+];
+
+const coursesContainer = document.getElementById("courses");
+
+courses.forEach(course => {
+    coursesContainer.innerHTML += `
+        <div class="course">
+            <h2>${course.title}</h2>
+            <p>${course.description}</p>
+            <span>${course.duration}</span>
+            <button>Enroll Now</button>
+        </div>
+    `;
+});
