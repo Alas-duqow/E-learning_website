@@ -8,7 +8,7 @@ loginBtn.addEventListener("click", function () {
         return;
     }
 
-    if (email.value === "admin@gmail.com" && password.value === "12345") {
+    if (email.value === " " && password.value === "  ") {
         alert("Login successful!");
 
         // Go to dashboard
